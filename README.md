@@ -11,10 +11,8 @@ Routes
 | route_name        | TEXT      | Назва маршруту                  |
 | route_time        | TIME      | Приблизний час маршруту         |
 | distance          | FLOAT     | Відстань маршруту               |
-| departure_station | TEXT      | Кінцева станція                 |
-| arrival_station   | TEXT      | Станція відправлення            |
-| start_station_id  | INT       | Ідентифікатор початкової зупинки|
-| end_station_id    | INT       | Ідентифікатор кінцевої зупинки  |       
+| start_station_id  | INT       | Ідентифікатор початкової cтанції|
+| end_station_id    | INT       | Ідентифікатор кінцевої станції  |       
 
 TicketPrices
 |   Назва атрибуту  | Тип даних |               Опис              |
@@ -48,6 +46,6 @@ BusesSchedules
 | route_id          | INT       | Унікальний ідентифікатор маршруту|
 | schedule_id       | INT       | Унікальний ідентифікатор розкладу|
 | start_station_id  | INT       | Унікальний ідентифікатор станції |
-| end_station_id    | INT       |Унікальний ідентифікатор станції  |
+| end_station_id    | INT       | Унікальний ідентифікатор станції |
 | vehicle_id        | INT       | Унікальний ідентифікатор тс.     |
-| price_id          | INT       |Унікальний ідентифікатор ціни     |
+| price_id          | INT       | Унікальний ідентифікатор ціни    |
