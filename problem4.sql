@@ -11,7 +11,7 @@ JOIN Stations s3 ON r2.start_station_id = s3.station_id
 JOIN Stations s4 ON r2.end_station_id = s4.station_id
 JOIN Schedules schedules_departure_2 ON r2.route_id = schedules_departure_2.route_id AND s3.station_id = schedules_departure_2.station_id
 JOIN Schedules schedules_arrival ON r2.route_id = schedules_arrival.route_id AND s4.station_id = schedules_arrival.station_id
-WHERE s1.name_station = 'ТЦ Велес' AND s4.name_station = 'вул. Коновальця'
+WHERE s1.name_station = 'Велес' AND s4.name_station = 'Коновальця'
       AND schedules_departure_1.departure_time < schedules_intermediate.arrival_time
       AND schedules_intermediate.departure_time < schedules_arrival.arrival_time;
 
