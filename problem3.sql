@@ -1,5 +1,5 @@
--- Які маршрути є оптимальними для автобусів/тролейбусів/трамваїв?
-SELECT r.route_name, v.type_vehicle
-FROM Routes r
-JOIN Vehicles v ON r.vehicle_id = v.vehicle_id
-WHERE v.type_vehicle = 'автобус';
+-- Виведення переліку маршрутів зі станції
+SELECT r.route_name, s.name_station as start_station
+FROM routes r
+JOIN stations s ON r.start_station_id = s.station_id
+WHERE s.name_station = 'Каскад';
