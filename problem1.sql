@@ -1,7 +1,7 @@
--- Як можна планувати рейси для кожної станції на основі розкладів та часу прибуття/відправлення транспорту?
-SELECT s.name_station, COUNT(*) AS number_of_departures
-FROM Stations s
-JOIN Schedules ON s.station_id = Schedules.station_id
-GROUP BY s.name_station
-ORDER BY number_of_departures DESC;
+-- Отримання проміжних станцій
+SELECT s.name_station, i.sequence
+FROM IntermediateStations i
+JOIN Stations s ON i.station_id = s.station_id
+WHERE i.route_id = 1
+ORDER BY i.sequence;
 
